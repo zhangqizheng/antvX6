@@ -13,7 +13,7 @@ export const configSetting = (Shape) => {
     },
     connecting: {
       router: {
-        name: 'manhattan',
+        name: 'normal',
         args: {
           padding: 1,
         },
@@ -90,132 +90,6 @@ export const configNodeShape = (type) => {
   */
   const nodeShapeList = [
     {
-      label: '椭圆形',
-      data: {
-        type: 'defaultOval'
-      },
-      shape: 'rect',
-      width: 100,
-      height: 50,
-      attrs: {
-        body: {
-          rx: 20,
-          ry: 26,
-          fill: '#fff',
-          stroke: '#333'
-        },
-        label: {
-          text: '椭圆形',
-          fontSize: 16,
-          fill: '#333'
-        }
-      }
-    },
-    {
-      label: '方形',
-      data: {
-        type: 'defaultSquare',
-      },
-      shape: 'rect',
-      width: 100,
-      height: 50,
-      attrs: {
-        label: {
-          text: '方形',
-          fontSize: 16,
-          fill: '#333'
-        },
-        body: {
-          fill: '#fff',
-          stroke: '#333'
-        }
-      },
-    },
-    {
-      label: '圆角矩形',
-      data: {
-        type: 'defaultYSquare'
-      },
-      shape: 'rect',
-      width: 100,
-      height: 50,
-      attrs: {
-        body: {
-          rx: 6,
-          ry: 6,
-          fill: '#fff',
-          stroke: '#333'
-        },
-        label: {
-          text: '圆角矩形',
-          fontSize: 16,
-          fill: '#333'
-        }
-      },
-    },
-    {
-      label: '菱形',
-      data: {
-        type: 'defaultRhombus'
-      },
-      shape: 'polygon',
-      width: 120,
-      height: 50,
-      attrs: {
-        body: {
-          refPoints: '0,10 10,0 20,10 10,20',
-          fill: '#fff',
-          stroke: '#333'
-        },
-        label: {
-          text: '菱形',
-          fontSize: 16,
-          fill: '#333'
-        }
-      },
-    },
-    {
-      label: '平行四边形',
-      data: {
-        type: 'defaultRhomboid'
-      },
-      shape: 'polygon',
-      width: 120,
-      height: 50,
-      attrs: {
-        body: {
-          refPoints: '10,0 40,0 30,20 0,20',
-          fill: '#fff',
-          stroke: '#333'
-        },
-        label: {
-          text: '平行四边形',
-          fontSize: 16,
-          fill: '#333'
-        }
-      }
-    },
-    {
-      label: '圆形',
-      data: {
-        type: 'defaultCircle'
-      },
-      shape: 'circle',
-      width: 80,
-      height: 80,
-      attrs: {
-        label: {
-          text: '圆形',
-          fontSize: 16,
-          fill: '#333'
-        },
-        body: {
-          fill: '#fff',
-          stroke: '#333'
-        }
-      }
-    },
-    {
       label: "图片",
       data: {
         type: 'otherImage'
@@ -238,7 +112,7 @@ export const configNodeShape = (type) => {
       ],
       attrs: {
         body: {
-          stroke: '#5F95FF',
+          stroke: '#fff',
           fill: '#5F95FF',
         },
         image: {
@@ -250,8 +124,88 @@ export const configNodeShape = (type) => {
         },
         label: {
           fontSize: 14,
-          fill: '#fff',
+          fill: '#333',
           text: '图片'
+        },
+      },
+    },
+    {
+      label: "交换机",
+      data: {
+        type: 'exchange'
+      },
+      shape: 'rect',
+      width: 80,
+      height: 80,
+      markup: [
+        {
+          tagName: 'rect',
+          selector: 'body',
+        },
+        {
+          tagName: 'image',
+        },
+        {
+          tagName: 'text',
+          selector: 'label',
+        },
+      ],
+      attrs: {
+        body: {
+          stroke: '#fff',
+          fill: '#fff',
+        },
+        image: {
+          width: 80,
+          height: 80,
+          refX: 0,
+          refY: 0,
+          xlinkHref: require("@/assets/1.png"),
+        },
+        label: {
+          fontSize: 14,
+          fill: '#333',
+          text: ''
+        },
+      },
+    },
+    {
+      label: "服务器",
+      data: {
+        type: 'server'
+      },
+      shape: 'rect',
+      width: 80,
+      height: 80,
+      markup: [
+        {
+          tagName: 'rect',
+          selector: 'body',
+        },
+        {
+          tagName: 'image',
+        },
+        {
+          tagName: 'text',
+          selector: 'label',
+        },
+      ],
+      attrs: {
+        body: {
+          stroke: '#fff',
+          fill: '#fff',
+        },
+        image: {
+          width: 80,
+          height: 80,
+          refX: 0,
+          refY: 0,
+          xlinkHref: require("@/assets/2.png"),
+        },
+        label: {
+          fontSize: 14,
+          fill: '#333',
+          text: ''
         },
       },
     }
