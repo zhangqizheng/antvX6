@@ -35,7 +35,7 @@
           interacting: false,
           connecting: {
             router: {
-              name: 'manhattan',
+              name: 'normal',
               args: {
                 padding: 1,
               },

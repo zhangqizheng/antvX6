@@ -2,7 +2,7 @@
   <div class="all">
     <div class="antv-content">
       <div class="antv-menu">
-        <h3> 基础图形列表 </h3>
+        <h3> 设备列表 </h3>
         <ul class="menu-list">
           <!-- <li draggable="true" @drag="menuDrag('defaultOval')"> <i class="icon-oval"></i> <strong>椭圆形</strong></li> -->
           <!-- <li draggable="true" @drag="menuDrag('defaultSquare')"><i class="icon-square"></i><strong>矩形</strong></li> -->
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="antv-wrapper">
-        <div class="wrapper-canvas" :style="{height: height}" id="wrapper" @drop="drop($event)" @dragover.prevent></div>
+        <div class="wrapper-canvas" id="wrapper" @drop="drop($event)" @dragover.prevent></div>
         <div class="wrapper-tips">
           <div class="wrapper-tips-item">
             <el-switch v-model="isPortsShow" @change="changePortsShow"></el-switch>
@@ -163,7 +163,7 @@
     },
     mounted() {
       this.initGraph()
-      this.getNewChartData()
+      // this.getNewChartData()
     },
     beforeDestroy() {
       this.graph.dispose()
