@@ -130,9 +130,9 @@ export const configNodeShape = (type) => {
       },
     },
     {
-      label: "交换机",
+      label: "DC交换机",
       data: {
-        type: 'exchange'
+        type: 'exchangeDC'
       },
       shape: 'rect',
       width: 80,
@@ -165,14 +165,137 @@ export const configNodeShape = (type) => {
         label: {
           fontSize: 14,
           fill: '#333',
-          text: ''
+          text: 'DC交换机',
+          y:"3.3em"
         },
       },
     },
     {
-      label: "服务器",
+      label: "25G接入交换机",
       data: {
-        type: 'server'
+        type: 'exchange25G'
+      },
+      shape: 'rect',
+      width: 80,
+      height: 80,
+      markup: [
+        {
+          tagName: 'rect',
+          selector: 'body',
+        },
+        {
+          tagName: 'image',
+        },
+        {
+          tagName: 'text',
+          selector: 'label',
+        },
+      ],
+      attrs: {
+        body: {
+          stroke: '#fff',
+          fill: '#fff',
+        },
+        image: {
+          width: 80,
+          height: 80,
+          refX: 0,
+          refY: 0,
+          xlinkHref: require("@/assets/1.png"),
+        },
+        label: {
+          fontSize: 14,
+          fill: '#333',
+          text: '25G接入交换机',
+          y:"3.3em"
+        },
+      },
+    },
+    {
+      label: "万兆接入交换机",
+      data: {
+        type: 'exchangeWanzhao'
+      },
+      shape: 'rect',
+      width: 80,
+      height: 80,
+      markup: [
+        {
+          tagName: 'rect',
+          selector: 'body',
+        },
+        {
+          tagName: 'image',
+        },
+        {
+          tagName: 'text',
+          selector: 'label',
+        },
+      ],
+      attrs: {
+        body: {
+          stroke: '#fff',
+          fill: '#fff',
+        },
+        image: {
+          width: 80,
+          height: 80,
+          refX: 0,
+          refY: 0,
+          xlinkHref: require("@/assets/1.png"),
+        },
+        label: {
+          fontSize: 14,
+          fill: '#333',
+          text: '万兆接入交换机',
+          y:"3.3em"
+        },
+      },
+    },{
+      label: "管理交换机",
+      data: {
+        type: 'exchangeGuanli'
+      },
+      shape: 'rect',
+      width: 80,
+      height: 80,
+      markup: [
+        {
+          tagName: 'rect',
+          selector: 'body',
+        },
+        {
+          tagName: 'image',
+        },
+        {
+          tagName: 'text',
+          selector: 'label',
+        },
+      ],
+      attrs: {
+        body: {
+          stroke: '#fff',
+          fill: '#fff',
+        },
+        image: {
+          width: 80,
+          height: 80,
+          refX: 0,
+          refY: 0,
+          xlinkHref: require("@/assets/1.png"),
+        },
+        label: {
+          fontSize: 14,
+          fill: '#333',
+          text: '管理交换机',
+          y:"3.3em"
+        },
+      },
+    },
+    {
+      label: "LVS服务器",
+      data: {
+        type: 'serverLVS'
       },
       shape: 'rect',
       width: 80,
@@ -205,7 +328,132 @@ export const configNodeShape = (type) => {
         label: {
           fontSize: 14,
           fill: '#333',
-          text: ''
+          text: 'LVS服务器',
+          y:"3.3em"
+        },
+      },
+    }
+    ,
+    {
+      label: "管理服务器",
+      data: {
+        type: 'serverGuanli'
+      },
+      shape: 'rect',
+      width: 80,
+      height: 80,
+      markup: [
+        {
+          tagName: 'rect',
+          selector: 'body',
+        },
+        {
+          tagName: 'image',
+        },
+        {
+          tagName: 'text',
+          selector: 'label',
+        },
+      ],
+      attrs: {
+        body: {
+          stroke: '#fff',
+          fill: '#fff',
+        },
+        image: {
+          width: 80,
+          height: 80,
+          refX: 0,
+          refY: 0,
+          xlinkHref: require("@/assets/2.png"),
+        },
+        label: {
+          fontSize: 14,
+          fill: '#333',
+          text: '管理服务器',
+          y:"3.3em"
+        },
+      },
+    },
+    {
+      label: "4U缓存服务器-鲲鹏",
+      data: {
+        type: 'server4U'
+      },
+      shape: 'rect',
+      width: 80,
+      height: 80,
+      markup: [
+        {
+          tagName: 'rect',
+          selector: 'body',
+        },
+        {
+          tagName: 'image',
+        },
+        {
+          tagName: 'text',
+          selector: 'label',
+        },
+      ],
+      attrs: {
+        body: {
+          stroke: '#fff',
+          fill: '#fff',
+        },
+        image: {
+          width: 80,
+          height: 80,
+          refX: 0,
+          refY: 0,
+          xlinkHref: require("@/assets/2.png"),
+        },
+        label: {
+          fontSize: 14,
+          fill: '#333',
+          text: '4U缓存服务器-鲲鹏',
+          y:"3.3em"
+        },
+      },
+    },
+    {
+      label: "直播缓存服务器",
+      data: {
+        type: 'serverZhibo'
+      },
+      shape: 'rect',
+      width: 80,
+      height: 80,
+      markup: [
+        {
+          tagName: 'rect',
+          selector: 'body',
+        },
+        {
+          tagName: 'image',
+        },
+        {
+          tagName: 'text',
+          selector: 'label',
+        },
+      ],
+      attrs: {
+        body: {
+          stroke: '#fff',
+          fill: '#fff',
+        },
+        image: {
+          width: 80,
+          height: 80,
+          refX: 0,
+          refY: 0,
+          xlinkHref: require("@/assets/2.png"),
+        },
+        label: {
+          fontSize: 14,
+          fill: '#333',
+          text: '直播缓存服务器',
+          y:"3.3em"
         },
       },
     }

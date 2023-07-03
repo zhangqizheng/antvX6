@@ -11,8 +11,14 @@
           <!-- <li draggable="true" @drag="menuDrag('defaultRhomboid')"><i class="icon-rhomboid"></i><strong>平行四边形</strong></li> -->
           <!-- <li draggable="true" @drag="menuDrag('defaultCircle')"><i class="icon-circle"></i><strong>圆形</strong></li> -->
           <!-- <li draggable="true" @drag="menuDrag('otherImage')"><i class="el-icon-picture"></i><strong>图片</strong></li> -->
-          <li draggable="true" @drag="menuDrag('exchange')"><img src="@/assets/1.png"><strong>交换机</strong></li>
-          <li draggable="true" @drag="menuDrag('server')"><img src="@/assets/2.png"><strong>服务器</strong></li>
+          <li draggable="true" @drag="menuDrag('serverLVS')"><img src="@/assets/2.png"><strong>LVS服务器</strong></li>
+          <li draggable="true" @drag="menuDrag('serverGuanli')"><img src="@/assets/2.png"><strong>管理服务器</strong></li>
+          <li draggable="true" @drag="menuDrag('server4U')"><img src="@/assets/2.png"><strong>4U缓存服务器-鲲鹏</strong></li>
+          <li draggable="true" @drag="menuDrag('serverZhibo')"><img src="@/assets/2.png"><strong>直播缓存服务器</strong></li>
+          <li draggable="true" @drag="menuDrag('exchangeDC')"><img src="@/assets/1.png"><strong>DC交换机</strong></li>
+          <li draggable="true" @drag="menuDrag('exchange25G')"><img src="@/assets/1.png"><strong>25G接入交换机</strong></li>
+          <li draggable="true" @drag="menuDrag('exchangeWanzhao')"><img src="@/assets/1.png"><strong>万兆接入交换机</strong></li>
+          <li draggable="true" @drag="menuDrag('exchangeGuanli')"><img src="@/assets/1.png"><strong>管理交换机</strong></li>
         </ul>
         <div class="wrapper-btn" v-if="isChange">
           <el-button type="success" @click="handlerSend">保存当前方案</el-button>
@@ -263,7 +269,16 @@
           return this.editDrawer = true
         }
         // 编辑图片节点
-        if(cell.isNode() && cell.data.type && (cell.data.type === 'otherImage' || cell.data.type === 'exchange' || cell.data.type === 'server')){
+        if(cell.isNode() && cell.data.type && 
+          (cell.data.type === 'otherImage' ||
+           cell.data.type === 'serverLVS' || 
+           cell.data.type === 'serverGuanli'|| 
+           cell.data.type === 'server4U'|| 
+           cell.data.type === 'serverZhibo'|| 
+           cell.data.type === 'exchangeDC'|| 
+           cell.data.type === 'exchange25G'|| 
+           cell.data.type === 'exchangeWanzhao'|| 
+           cell.data.type === 'exchangeGuanli')){
           this.editTitle = '编辑图片节点'
           const attrs = cell.attrs || { body:{fill: ''}, label: {text: '', fill: ''}, image:{xlinkHref: '', height:  80, width: 80} }
           this.form = {
